@@ -3,6 +3,145 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 48px 0 44px;
+}
+
+.menu {
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1800px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+    font-size: 15px;
+    @extend %rubik-500;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 34px;
+  }
+
+  &__link {
+    color: $blue;
+  }
+}
+
+.user-nav {
+  display: flex;
+
+  &__link {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__link--search {
+    width: 50px;
+    height: 50px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 36%;
+      left: 36%;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/icons/search.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__box {
+    position: relative;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    width: 178px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #fcd7b6;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 32px;
+      background-color: #fde7d3;
+      top: 9px;
+      left: 89px;
+    }
+  }
+
+  &__link--fav,
+  &__link--cart {
+    width: 90px;
+    height: 50px;
+  }
+
+  &__link--fav::after,
+  &__link--cart::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 17px;
+    bottom: 13px;
+    left: 36px;
+  }
+
+  &__link--fav::after {
+    background-image: url(../images/icons/fav.png);
+  }
+
+  &__link--cart::after {
+    background-image: url(../images/icons/cart.svg);
+  }
+
+  &__num {
+    position: absolute;
+    top: 13px;
+    left: 48px;
+    display: block;
+    width: 16px;
+    height: 16px;
+    color: $dark-blue;
+    background-color: #fff;
+    font-size: 10px;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  &__btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      width: 20px;
+      height: 20px;
+      background-image: url(../images/icons/nav-btn.svg);
+    }
+  }
+}
+
+
+
+
 
 
 
