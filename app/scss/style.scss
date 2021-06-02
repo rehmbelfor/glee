@@ -25,6 +25,10 @@
   &__item:not(:last-child) {
     margin-right: 34px;
   }
+
+  &__link {
+    color: $blue;
+  }
 }
 
 .user-nav {
@@ -106,7 +110,7 @@
     display: block;
     width: 16px;
     height: 16px;
-    color: #243f4d;
+    color: $dark-blue;
     background-color: #fff;
     font-size: 10px;
     line-height: 1.6;
