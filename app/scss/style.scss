@@ -17,6 +17,7 @@
   width: 100%;
 
   &__list {
+    padding-left: 150px;
     display: flex;
     font-size: 15px;
     @extend %rubik-500;
@@ -48,8 +49,8 @@
     &::after {
       content: '';
       position: absolute;
-      top: 36%;
-      left: 36%;
+      top: 17px;
+      left: 17px;
       width: 16px;
       height: 16px;
       background-image: url(../images/icons/search.svg);
@@ -89,24 +90,25 @@
   &__link--cart::after {
     content: '';
     position: absolute;
+    top: 23px;
     width: 18px;
     height: 17px;
-    bottom: 13px;
-    left: 36px;
   }
-
+  &__link--fav::after{
+    left: 41px;
+  }
+  &__link--cart::after{
+    right: 42px;
+  }
   &__link--fav::after {
     background-image: url(../images/icons/fav.png);
   }
-
   &__link--cart::after {
     background-image: url(../images/icons/cart.svg);
   }
-
   &__num {
     position: absolute;
-    top: 13px;
-    left: 48px;
+    top: 16px;
     display: block;
     width: 16px;
     height: 16px;
@@ -118,7 +120,12 @@
     border-radius: 50%;
     z-index: 5;
   }
-
+  &__num--fav{
+    left: 52px;
+  }
+  &__num--cart{
+    right: 32px;
+  }
   &__btn {
     position: relative;
     width: 50px;
@@ -126,7 +133,6 @@
     border: none;
     border-radius: 50%;
     background-color: #a3bbc8;
-
     &::after {
       content: '';
       position: absolute;
@@ -139,9 +145,93 @@
   }
 }
 
+// ---------------footer---------------
 
-
-
+.footer{
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #7b7b7b;
+  &__top{
+    padding: 80px 0 69px;
+    display: flex;
+    border-bottom: 1px solid #dae4e9;
+  }
+  &__contact,
+  &__nav{
+    max-width: 200px;
+    width: 100%;
+    margin-right: 100px;
+  }
+  &__logo{
+    display: block;
+    margin-bottom: 25px;
+  }
+  &__title{
+    margin-bottom: 15px;
+    padding-top: 15px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #1f2044;
+    text-transform: uppercase;
+  }
+  &__item:not(:last-child){
+    margin-bottom: 9px;
+  }
+  &__address,
+  &__phone,
+  &__mail{
+    text-transform: uppercase;
+  }
+  &__subscribe{
+    max-width: 270px;
+  }
+  &__text{
+    margin-bottom: 35px;
+  }
+  &__form{
+    display: flex;
+  }
+  &__form-label{
+    max-width: 170px;
+    width: 100%;
+  }
+  &__form-input{
+    width: 100%;
+    padding: 10px 15px 10px;
+    font-size: 12px;
+    background-color: #fef7f0;
+    border: none;
+  }
+  &__form-input::placeholder{
+    color: #234969;
+  }
+  &__form-btn{
+    padding: 0 16px;
+    font-size: 14px;
+    line-height: 1;
+    color: #fff;
+    background: #a3bbc8;
+    border: none;
+  }
+  &__bottom{
+    padding: 32px 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__menu-list{
+    display: flex;
+  }
+  &__menu-item:not(:last-child){
+    position: relative;
+    margin-right: 32px;
+  }
+  &__menu-item::after{
+    content: '|';
+    position: absolute;
+    right: -14px;
+  }
+}
 
 
 
