@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .header {
@@ -144,6 +145,93 @@
     }
   }
 }
+
+// ---------------top-slider---------------
+
+.top-slider{
+  height: calc(100vh - 143px);
+  display: flex !important;
+  align-items: center;
+  &__container{
+    max-width: 1430px;
+    margin: 0 auto;
+  }
+  
+  &__item{
+    display: flex !important;
+    justify-content: space-between;
+  }
+  &__content{
+    padding: 125px 0 196px 130px;
+    
+  }
+  &__title{
+    margin-bottom: 46px;
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 1;
+    color: $dark-blue;
+    max-width: 470px;
+    text-transform: uppercase;
+  }
+  &__text{
+    margin-bottom: 25px;
+    @extend %rubik-400;
+    font-size: 18px;
+    line-height: 1.7;
+    color: $blue;
+    max-width: 370px;
+  }
+  &__btn{
+    position: relative;
+    padding: 24px 28px 21px;
+    display: block;
+    @extend %rubik-500;
+    font-size: 15px;
+    background-color: $accent;
+    color: #fff;
+    max-width: 200px;
+    &::after{
+      content: '';
+      position: absolute;
+      right: 19px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 22px;
+      height: 9px;
+      background-image: url(../images/icons/arrow_btn.svg);
+    }
+  }
+}
+
+.slick-dots{
+  margin-top: 13px;
+  display: flex;
+  justify-content: center;
+  li{
+    padding: 0 6px;
+    opacity: 0.3;
+  }
+  .slick-active{
+    opacity: 1;
+  }
+  button{
+    width: 29px;
+    height: 29px;
+    background-color: #fff;
+    @extend %rubik-500;
+    font-size: 11px;
+    line-height: 2.6;
+    color: $dark-blue;
+    border: none;
+    border-radius: 50%; 
+  }
+}
+
+
+
+
+
 
 // ---------------footer---------------
 
