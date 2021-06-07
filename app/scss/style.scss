@@ -8,6 +8,12 @@
   padding: 48px 0 44px;
 }
 
+.logo__img{
+  width: 146px;
+  height: 39px;
+  object-fit: contain;
+}
+
 .menu {
   margin: 0 auto;
   padding: 0 15px;
@@ -156,7 +162,6 @@
     max-width: 1430px;
     margin: 0 auto;
   }
-  
   &__item{
     display: flex !important;
     justify-content: space-between;
@@ -166,7 +171,7 @@
     
   }
   &__title{
-    margin-bottom: 46px;
+    margin-bottom: 20px;
     @extend %rubik-500;
     font-size: 72px;
     line-height: 1;
@@ -175,7 +180,7 @@
     text-transform: uppercase;
   }
   &__text{
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     @extend %rubik-400;
     font-size: 18px;
     line-height: 1.7;
@@ -185,12 +190,12 @@
   &__btn{
     position: relative;
     padding: 24px 28px 21px;
-    display: block;
+    display: inline-block;
     @extend %rubik-500;
     font-size: 15px;
     background-color: $accent;
     color: #fff;
-    max-width: 200px;
+    min-width: 200px;
     &::after{
       content: '';
       position: absolute;
